@@ -1,0 +1,21 @@
+
+.cotizacion-letra{
+    font-size: 18px !important;
+}
+
+.table-bordered td, .table-bordered th{
+    border: 1px solid rgba(0, 0, 0, 0.61) !important;
+}
+
+#cotizacion-datos02{
+    font-size: 1.4em !important;
+}
+
+.cot_total{
+    border: none !important;
+}
+
+.cont_imp_tabla{
+    padding: 3px 20px !important;
+}
+
