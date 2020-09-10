@@ -27,7 +27,7 @@
     $html2pdf->writeHTML($stringForPdf);
 */
 
-    //$html2pdf->writeHTML($message);
+    $html2pdf->writeHTML($message);
 
 /*
     $reshtml2pdf = $html2pdf->Output('Document_gen.pdf', 'D');  
