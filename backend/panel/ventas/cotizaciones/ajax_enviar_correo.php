@@ -18,7 +18,14 @@
     $html2pdf->pdf->SetDisplayMode('fullpage');
     //$message = '<page><img src="'.$pdf.'"/></page>';
     $message = '<img src="'.$pdf.'"/>';
-    $html2pdf->writeHTML($message);
+
+    ob_start() //starts output buffering
+    echo '<img src="'.$pdf.'"/>';
+    $stringForPdf = ob_get_contents(); // this now contains the the above string
+    ob_end_clean(); // close and clean the output buffer.
+    $html2pdf->WriteHtml($stringForPdf);
+
+    //$html2pdf->writeHTML($message);
 
 /*
     $reshtml2pdf = $html2pdf->Output('Document_gen.pdf', 'D');  
