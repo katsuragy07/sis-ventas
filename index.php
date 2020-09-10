@@ -48,7 +48,7 @@
         <script src="js/popper.js"></script>
         <script src="js/bootstrap.js"></script>
         -->
-        <script src="js/panel.js"></script>
+        
         <!--<script src="js/font-awesome.js"></script>-->
 	</head>
     <body class="hold-transition sidebar-mini layout-fixed">
@@ -178,6 +178,7 @@
         <!-- AdminLTE App -->
         <script src="includes/dist/js/adminlte.js"></script>
 
+	<script src="js/panel.js"></script>
 
     </body>
 </html>
