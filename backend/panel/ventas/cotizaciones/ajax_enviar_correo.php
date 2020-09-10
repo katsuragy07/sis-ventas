@@ -17,17 +17,12 @@
     $html2pdf = new HTML2PDF('P', array($pdf_x,$pdf_y), 'es', true, 'UTF-8', array(0, 0, 0, 0));
     $html2pdf->pdf->SetDisplayMode('fullpage');
     //$message = '<page><img src="'.$pdf.'"/></page>';
-    $message = '<p>Hello world</p>';
+    //$message = '<p>Hello world</p>';
 
-/*
-    ob_start() //starts output buffering
-    echo '<img src="'.$pdf.'"/>';
-    $stringForPdf = ob_get_contents(); // this now contains the the above string
-    ob_end_clean(); // close and clean the output buffer.
-    $html2pdf->writeHTML($stringForPdf);
-*/
+    //$html2pdf->writeHTML($message);
 
-    $html2pdf->writeHTML($message);
+    $img = base64_decode(preg_replace('#^data:image/[^;]+;base64,#', '', $pdf));
+    $html2pdf->pdf->Image("@".$img, 68, 208, 46, 46);
 
     $reshtml2pdf = $html2pdf->Output('Document_gen.pdf', 'D');  
  
