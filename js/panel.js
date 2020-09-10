@@ -6538,6 +6538,7 @@ function emailDiv(nombreDiv,tipo,correo){
                     
                 },
                 success: function(response){ 
+                    console.log(response)
                     $('.btn_actions_email').html(`<i class="fas fa-envelope"></i> Enviar por Correo`); 
                     $(".modal_head_loading").html(``); 
                     if(response=="200"){

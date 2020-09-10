@@ -8,7 +8,9 @@
     $destinatario = $_POST['destinatario'];
 
    
-    require_once('../../../html2pdf/html2pdf.class.php');
+    //require_once('../../../html2pdf/html2pdf.class.php');
+    require '../../../vendor/autoload.php';
+    use Spipu\Html2Pdf\Html2Pdf;
 
     // Declaramos el formato del documento PDF
     $html2pdf = new HTML2PDF('P', array($pdf_x,$pdf_y), 'es', true, 'UTF-8', array(0, 0, 0, 0));
