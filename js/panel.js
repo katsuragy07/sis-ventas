@@ -6567,7 +6567,7 @@ function emailDiv(nombreDiv,tipo,correo){
                 },
                 timeout: 20000,
                 error: function(xhr, status){
-                    console.log(response)
+                    console.log(xhr + " " + status)
                     $('.btn_actions_cot').prop('disabled', false);
                     $('.btn_actions_email').html(`<i class="fas fa-envelope"></i> Enviar por Correo`); 
                     $(".modal_head_loading").html(``);
