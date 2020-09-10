@@ -19,11 +19,13 @@
     //$message = '<page><img src="'.$pdf.'"/></page>';
     $message = '<img src="'.$pdf.'"/>';
 
+/*
     ob_start() //starts output buffering
     echo '<img src="'.$pdf.'"/>';
     $stringForPdf = ob_get_contents(); // this now contains the the above string
     ob_end_clean(); // close and clean the output buffer.
     $html2pdf->writeHTML($stringForPdf);
+*/
 
     //$html2pdf->writeHTML($message);
 
@@ -95,7 +97,7 @@
     }
     */
 
-echo "mod";
+echo "salida mod";
 
 
 
