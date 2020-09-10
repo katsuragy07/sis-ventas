@@ -23,7 +23,7 @@
     echo '<img src="'.$pdf.'"/>';
     $stringForPdf = ob_get_contents(); // this now contains the the above string
     ob_end_clean(); // close and clean the output buffer.
-    $html2pdf->WriteHtml($stringForPdf);
+    $html2pdf->writeHTML($stringForPdf);
 
     //$html2pdf->writeHTML($message);
 
