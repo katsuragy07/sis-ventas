@@ -6525,6 +6525,7 @@ function emailDiv(nombreDiv,tipo,correo){
                 cache: false,
                 processData:false,
                 beforeSend: function(){ 
+                    console.log('Enviando...')
                     $('.btn_actions_cot').prop('disabled', true);
                     $('.btn_actions_email').html(`
                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
@@ -6565,6 +6566,7 @@ function emailDiv(nombreDiv,tipo,correo){
                 },
                 timeout: 20000,
                 error: function(xhr, status){
+                    console.log(response)
                     $('.btn_actions_cot').prop('disabled', false);
                     $('.btn_actions_email').html(`<i class="fas fa-envelope"></i> Enviar por Correo`); 
                     $(".modal_head_loading").html(``);
