@@ -25,6 +25,7 @@ class Usuario{
                     </div>
                 `); 
             },
+            
             success: function(response){
                 var datos = JSON.parse(response);
                 var contenido_ajax = "";
