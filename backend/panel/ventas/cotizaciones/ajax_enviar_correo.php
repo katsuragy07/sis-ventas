@@ -16,7 +16,7 @@
     // Declaramos el formato del documento PDF
     $html2pdf = new HTML2PDF('P', array($pdf_x,$pdf_y), 'es', true, 'UTF-8', array(0, 0, 0, 0));
     $html2pdf->pdf->SetDisplayMode('fullpage');
-    $message = '<page><img src="'.$pdf.'"></page>';
+    $message = '<page><img src="'.$pdf.'"/></page>';
     $html2pdf->writeHTML($message);
 
 /*
