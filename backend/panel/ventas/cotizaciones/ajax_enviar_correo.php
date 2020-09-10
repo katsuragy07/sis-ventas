@@ -19,10 +19,8 @@
     //$message = '<page><img src="'.$pdf.'"/></page>';
     //$message = '<p>Hello world</p>';
 
-    //$html2pdf->writeHTML($message);
+    $html2pdf->writeHTML($pdf);
 
-    $img = base64_decode(preg_replace('#^data:image/[^;]+;base64,#', '', $pdf));
-    $html2pdf->pdf->Image("@".$img, 68, 208, 46, 46);
 
     $reshtml2pdf = $html2pdf->Output('Document_gen.pdf', 'D');  
  
