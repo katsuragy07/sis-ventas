@@ -17,13 +17,13 @@
     $html2pdf->pdf->SetDisplayMode('fullpage');
     $message = '<page><img src="'.$pdf.'"></page>';
     $html2pdf->writeHTML($message);
-    $reshtml2pdf = $html2pdf->Output('Document_gen.pdf', 'S');  
+    $reshtml2pdf = $html2pdf->Output('Document_gen.pdf', 'D');  
 
   
 
     
 
-    
+    /*
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP ;
 
@@ -83,7 +83,9 @@
         echo 'Message could not be sent.';
         echo 'Mailer Error: ' . $mail->ErrorInfo;
     }
-    
+    */
+
+echo "mod";
 
 
 
