@@ -14,6 +14,7 @@
 
 
     // Declaramos el formato del documento PDF
+/*
     $html2pdf = new HTML2PDF('P', array($pdf_x,$pdf_y), 'es', true, 'UTF-8', array(0, 0, 0, 0));
     $html2pdf->pdf->SetDisplayMode('fullpage');
     $message = "<page><img src='$pdf'></page>";
@@ -23,7 +24,7 @@
 
 
     $reshtml2pdf = $html2pdf->Output('Document_gen.pdf', 'S');  
- 
+ */
 
     
 
@@ -56,9 +57,13 @@
     
     //Attachments
     if($tipo=="cotizacion"){
-        $mail->addStringAttachment($reshtml2pdf, "Cotizacion_n".$nro.".pdf");
+        //$mail->addStringAttachment($reshtml2pdf, "Cotizacion_n".$nro.".pdf");
+        $resource = base64_decode(str_replace(" ", "+", substr($pdf, strpos($pdf, ","))));
+        $mail->addStringAttachment($resource, "Cotizacion_n".$nro.".png");
     }else{
-        $mail->addStringAttachment($reshtml2pdf, "Venta_n".$nro.".pdf");
+        //$mail->addStringAttachment($reshtml2pdf, "Venta_n".$nro.".pdf");
+        $resource = base64_decode(str_replace(" ", "+", substr($pdf, strpos($pdf, ","))));
+        $mail->addStringAttachment($resource, "Venta_n".$nro.".png");
     }
     
     //$resource = base64_decode(preg_replace('#^data:application/[^;]+;filename=generated.pdf;base64,#', '', $pdf));
